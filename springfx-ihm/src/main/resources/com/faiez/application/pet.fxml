@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<?scenebuilder-classpath-element  D:/workspace2014/test6/target/classes?>
+
+<VBox id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="800" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.faiez.ihm.PetController">
+        <fx:include source="MyMenu.fxml" fx:id="myMenu" />
+      <children>
+
+ <AnchorPane prefHeight="600.0" prefWidth="200.0">
+<children>
+      <Button layoutX="0" layoutY="20" onAction="#newPet" text="New Pet" />
+      <Label layoutX="196.0" layoutY="20.0" style="-fx-font: NORMAL 20 Tahoma;" text="Pets List Page" GridPane.columnIndex="0" />
+
+    <TableView fx:id="tableView" layoutY="50">
+        <columns>
+            <TableColumn fx:id="name" prefWidth="100.0" text="Name">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="color" prefWidth="100.0" text="Color">
+                <cellValueFactory>
+                    <PropertyValueFactory property="color" />
+                </cellValueFactory>
+            </TableColumn>
+
+
+        </columns>
+
+    </TableView>
+    <Pagination fx:id="pagination" layoutX="188.0" layoutY="450" />
+</children></AnchorPane>
+
+
+
+
+      </children>
+</VBox>
